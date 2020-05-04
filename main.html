@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="postcard">
+        <div id="postcard-textarea">
+            <p contenteditable="true">Dear Mom,</p>
+            <p contenteditable="true">I would like to thank you for the invaluable support and love provided to me during this challenging time. Here is a thank you letter for you, I wish you the best of health and happiness in life.</p>
+            <p contenteditable="true">Thank you,</p>
+            <p contenteditable="true">Chee Seng</p>
+        </div>
+        <div id="postcard-image-area">
+            <img id="postcard-image" src="assets/png/sample1.png" alt="">
+        </div>
+    </div>
+
+    <button id="send-letter">Send Letter</button>
+    <button id="download">Download</button>
+    <button id="change-illustration">Change Illustration</button>
+
+    <div id="illustration-modal">
+        <span class="close">&times;</span>
+
+        <div class="modal-content">
+            <input type="image" id="image1" class="illustration-image" src="assets/png/sample1.png" onclick="getImageSource(this.src)">
+            <input type="image" id="image2" class="illustration-image" src="assets/png/sample2.png" onclick="getImageSource(this.src)">
+            <input type="image" id="image3" class="illustration-image" src="assets/png/sample3.png" onclick="getImageSource(this.src)">
+            <input type="image" id="image4" class="illustration-image" src="assets/png/sample4.png" onclick="getImageSource(this.src)">
+            <input type="image" id="image5" class="illustration-image" src="assets/png/sample5.png" onclick="getImageSource(this.src)">
+        </div>
+        <input type="button" name="back" value="back">
+        <input type="button" name="use-this-illustraion" id="confirm-illustration" class="button" value="Use this Illustration" onclick="changeImage()">
+    </div>
+
+<script src="js/download.js"></script>
+<script src="js/modal.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>
