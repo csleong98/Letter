@@ -1,10 +1,18 @@
 <?php
-$to      = $_POST['email'];
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+   $to = $_POST['email'];
+   $subject = "This is subject";
 
-mail($to, $subject, $message, $headers);
+   $message = "<b>This is HTML message.</b>";
+   $message .= "<h1>This is headline.</h1>";
+
+   $header = "From:mymailid@gmail.com \r\n";
+   $retval = mail($to,$subject,$message,$header);
+   if(isset($retval))//change
+   {
+       echo "Message sent successfully...";
+   }
+   else
+   {
+    echo "Message could not be sent...";
+}
 ?> 
