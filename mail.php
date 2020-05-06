@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 
 else {
     echo "Not detected";
-    header('Location: Letter/index.html');
+    header('Location: index.html');
 }
 ?> 
  
