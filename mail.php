@@ -11,6 +11,7 @@ if (isset($_POST['submit'])) {
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
     mail($to,$subject,$message,$headers);
+    echo "Message sent successfully";
 }
 
 else {
