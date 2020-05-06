@@ -13,5 +13,10 @@ if (isset($_POST['submit'])) {
     mail($to,$subject,$message,$headers);
     header('Location: index.html');
 }
+
+else {
+    echo "Not detected";
+    header('Location: Letter/index.html');
+}
 ?> 
  
