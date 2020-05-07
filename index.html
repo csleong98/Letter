@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Letter</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
     <div id="postcard">
@@ -19,7 +20,7 @@
         </div>
     </div>
 
-    <form class="mail" method="post" action="mail.php">
+    <form class="mail" method="post" action="">
         <label for="email">The person's email here</label>
         <input type="email" name="email">
         <input id="send-letter"  type="submit" name="submit">
@@ -45,5 +46,7 @@
 <script src="js/download.js"></script>
 <script src="js/modal.js"></script>
 <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</script>
 </body>
 </html>
