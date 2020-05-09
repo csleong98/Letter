@@ -2,11 +2,10 @@
 
 var modal = document.getElementById("illustration-modal");
 var changeIllustration = document.getElementById("change-illustration");
-var close = document.getElementsByClassName("close")[0];
+var close = document.getElementsByClassName("delete")[0];
 var defaultIllustration = document.getElementById("postcard-image").src;
 var selectedIllustration = document.getElementsByClassName("illustration-image")[0].src;
-var confirmButton = document.getElementById("confirm-illustration")
-
+var confirmButton = document.getElementById("confirm-illustration");
 changeIllustration.onclick = function() {
     modal.style.display = "block";
 }
@@ -51,7 +50,7 @@ function changeImage() {
     img.src = defaultIllustration;
 
     //replace original img element with new img element
-    document.getElementById("postcard-image-area").replaceChild(img, originalIllustration);
+    document.getElementById("img-figure").replaceChild(img, originalIllustration);
     
 }
 

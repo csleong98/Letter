@@ -1,50 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Letter</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/4bd64ac082.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
-    <div id="postcard">
-        <div id="postcard-textarea">
-            <p contenteditable="true">Dear Mom,</p>
-            <p contenteditable="true">I would like to thank you for the invaluable support and love provided to me during this challenging time. Here is a thank you letter for you, I wish you the best of health and happiness in life.</p>
-            <p contenteditable="true">Thank you,</p>
-            <p contenteditable="true">Chee Seng</p>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="https://bulma.io/images/bulma-logo.png"
+                    alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-        <div id="postcard-image-area">
-            <img id="postcard-image" src="assets/png/sample1.png" alt="">
+    </nav>
+
+    <div class="container is-widescreen">
+        <div class="columns is-centered is-mobile box" style="margin-top: 1%;">
+            <div id="postcard">
+                <div id="postcard-textarea-top">
+                    <p class="postcard-text" contenteditable="true">Dear Mom,</p>
+                    <p class="postcard-text" contenteditable="true">I would like to thank you for the invaluable support and love provided to
+                        me
+                        during this challenging time. Here is a thank you letter for you, I wish you the best of health
+                        and
+                        happiness in life.</p>
+                </div>
+                <div id="postcard-image-area">
+                    <figure id="img-figure" class="image is-1by1" style="margin: 10px 0 10px 0;">
+                        <img id="postcard-image" src="assets/png/sample1.png" alt="">
+                    </figure>
+                </div>
+                <div id="postcard-textarea-bottom">
+                    <p class="postcard-text" contenteditable="true">Thank you,</p>
+                    <p class="postcard-text" contenteditable="true">Chee Seng</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered is-mobile" style="margin-top: 1%; margin-bottom: 1%;">
+            <div class="field is-grouped">
+                <p class="control">
+                    <button class="button is-primary is-outlined" id="download">Download</button>
+                </p>
+                <p class="control">
+                    <button class="button is-primary is-outlined" id="change-illustration">Change Illustration</button>
+                </p>
+            </div>
         </div>
     </div>
 
-    <form class="mail" method="post" action="">
-        <label for="email">The person's email here</label>
-        <input type="email" name="email">
-        <input id="send-letter"  type="submit" name="submit">
-    </form>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+              Built by <a href="https://csleong.me">Chee Seng Leong</a> with <i class="fas fa-heart"></i>
+            </p>
+          </div>
+    </footer>
 
-    <button id="download">Download</button>
-    <button id="change-illustration">Change Illustration</button>
+    <div id="illustration-modal" class="modal">
+        <!-- <span class="close">&times;</span> -->
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Change Illustration</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
 
-    <div id="illustration-modal">
-        <span class="close">&times;</span>
+            <section class="modal-card-body columns is-multiline">
+                <input type="image" id="image1" class="column is-half illustration-image card" src="assets/png/sample1.png"
+                    onclick="getImageSource(this.src)">
+                <input type="image" id="image2" class="column is-half illustration-image card" src="assets/png/sample2.png"
+                    onclick="getImageSource(this.src)">
+                <input type="image" id="image3" class="column is-half illustration-image card" src="assets/png/sample3.png"
+                    onclick="getImageSource(this.src)">
+                <input type="image" id="image4" class="column is-half illustration-image card" src="assets/png/sample4.png"
+                    onclick="getImageSource(this.src)">
+                <input type="image" id="image5" class="column is-half illustration-image card" src="assets/png/sample5.png"
+                    onclick="getImageSource(this.src)">
+            </section>
 
-        <div class="modal-content">
-            <input type="image" id="image1" class="illustration-image" src="assets/png/sample1.png" onclick="getImageSource(this.src)">
-            <input type="image" id="image2" class="illustration-image" src="assets/png/sample2.png" onclick="getImageSource(this.src)">
-            <input type="image" id="image3" class="illustration-image" src="assets/png/sample3.png" onclick="getImageSource(this.src)">
-            <input type="image" id="image4" class="illustration-image" src="assets/png/sample4.png" onclick="getImageSource(this.src)">
-            <input type="image" id="image5" class="illustration-image" src="assets/png/sample5.png" onclick="getImageSource(this.src)">
+            <footer class="modal-card-foot">
+                <input class="button" type="button" name="back" value="Back">
+                <input type="button" name="use-this-illustraion" id="confirm-illustration" class="button"
+                    value="Use this Illustration" onclick="changeImage()">
+            </footer>
         </div>
-        <input type="button" name="back" value="back">
-        <input type="button" name="use-this-illustraion" id="confirm-illustration" class="button" value="Use this Illustration" onclick="changeImage()">
     </div>
 
-<script src="js/main.js"></script>
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-
-</script>
+    <script src="js/main.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </body>
+
 </html>
