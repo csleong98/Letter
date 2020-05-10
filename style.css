@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
 
-#postcard {
+#postcard-container {
     border: solid 1px lightseagreen;
+}
+
+#postcard {
     width: 480px;
     height: 680px;
     background-color: white;
