@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
 
-/* .postcard-inner {
-    background-color: lightslategrey;
-}
-
-#postcard-textarea-top {
-    background-color: lightcoral;
-}
-
-#postcard-image-area {
-    background-color: lightgreen;
-} */
-
-
 #postcard {
     border: solid 1px lightseagreen;
     width: 480px;
@@ -33,10 +20,4 @@
     outline-style: dashed;
     outline-color: lightseagreen;
     outline-width: 2px;
-}
-
-.modal-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
 }

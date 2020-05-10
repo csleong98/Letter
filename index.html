@@ -12,22 +12,21 @@
 </head>
 
 <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="assets/logo.png"
-                    alt="" width="640" height="160">
-            </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-    </nav>
-
     <div class="container is-widescreen">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <h2>Letter</h2>
+                </a>
+    
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        </nav>
+
         <div class="columns is-centered is-mobile box" style="margin-top: 1%;">
             <div id="postcard">
                 <div id="postcard-textarea-top">
@@ -76,20 +75,20 @@
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">Change Illustration</p>
-                <button class="delete" aria-label="close"></button>
+                <button class="back delete" aria-label="close"></button>
             </header>
 
-            <section class="modal-card-body columns is-multiline">
-                <input type="image" id="image1" class="column is-half illustration-image" src="assets/png/illustration-1.png"
+            <section class="modal-card-body">
+                <input type="image" id="image1" class=" illustration-image" src="assets/png/illustration-1.png"
                     onclick="getImageSource(this.src)">
-                <input type="image" id="image2" class="column is-half illustration-image" src="assets/png/illustration-2.png"
+                <input type="image" id="image2" class=" illustration-image" src="assets/png/illustration-2.png"
                     onclick="getImageSource(this.src)">
-                <input type="image" id="image3" class="column is-half illustration-image" src="assets/png/illustration-3.png"
+                <input type="image" id="image3" class=" illustration-image" src="assets/png/illustration-3.png"
                     onclick="getImageSource(this.src)">
             </section>
 
             <footer class="modal-card-foot">
-                <input class="button" type="button" name="back" value="Back">
+                <button class="back button">Back</button>
                 <input type="button" name="use-this-illustraion" id="confirm-illustration" class="button"
                     value="Use this Illustration" onclick="changeImage()">
             </footer>

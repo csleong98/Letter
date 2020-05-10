@@ -2,31 +2,34 @@
 
 var modal = document.getElementById("illustration-modal");
 var changeIllustration = document.getElementById("change-illustration");
-var close = document.getElementsByClassName("delete")[0];
+var close = document.getElementsByClassName("back")[0];
+var close1 = document.getElementsByClassName("back")[1];
 var defaultIllustration = document.getElementById("postcard-image").src;
 var selectedIllustration = document.getElementsByClassName("illustration-image")[0].src;
 var confirmButton = document.getElementById("confirm-illustration");
+
 changeIllustration.onclick = function() {
-    modal.style.display = "block";
+    modal.classList.toggle("is-active");
+    confirmButton.disabled = true;
 }
 
 close.onclick = function() {
-    modal.style.display = "none";
+    modal.classList.toggle("is-active");
 }
 
-// problem here, targetting is wrong
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+close1.onclick = function() {
+    modal.classList.toggle("is-active");
 }
+
 
 function getImageSource(src) {
     selectedIllustration = src;
-    
+
     if (defaultIllustration !== selectedIllustration) {
+        confirmButton.classList.add("is-primary");
         confirmButton.disabled = false;
     } else {
+        confirmButton.classList.remove("is-primary");
         confirmButton.disabled = true;
     }
 
@@ -51,7 +54,7 @@ function changeImage() {
 
     //replace original img element with new img element
     document.getElementById("img-figure").replaceChild(img, originalIllustration);
-    
+    modal.classList.toggle("is-active");
 }
 
 // Illustration changing function <end>
