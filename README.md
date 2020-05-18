@@ -1,15 +1,17 @@
 # Letter - to someone special :love_letter:
 
 ## About Letter
+![Letter](thumbnail.png)
+
 A simple webapp that enables people to customise their digital letters with custom-drawn illustrations during this difficult times. Write one and download it now
 
-Try [Letter](https://csleong98.github.io/Letter/)!!!
+## Try [Letter](https://csleong98.github.io/Letter/)!!!
 
 ---
 ### :construction: Features which I am working on
-1. Emailing from the web app itself
-2. Responsiveness on mobile
-3. Support for SVGs
+- [ ] Emailing from the web app itself
+- [ ] Responsiveness on mobile
+- [ ] Support for SVGs
 
 ### :smiley: Exciting features that are in my mind
 1. More customizations! You can customise border colors, font family and more!
