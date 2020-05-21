@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/4bd64ac082.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 </head>
 
@@ -41,16 +42,20 @@
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div class="navbar-end">
-                <div class="navbar-item">
-                  <div class="buttons">
-                    <a class="button is-light" href="lottie.html">
-                      LottieFiles Testing
-                    </a>
-                  </div>
-                </div>
-              </div>
         </nav>
+
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="is-active"> <a href="#">LottieFile Testing</a></li>
+            </ul>
+        </nav>
+
+        <article class="message is-primary">
+            <div class="message-body">
+                Currently testing the possibility of adding Lottiefiles into Letter, the end result might change.
+            </div>
+        </article>
 
         <div class="columns is-centered is-mobile box" style="margin-top: 1%;">
             <div id="postcard-container">
@@ -64,9 +69,7 @@
                             happiness in life.</p>
                     </div>
                     <div id="postcard-image-area">
-                        <figure id="img-figure" class="image is-1by1" style="margin: 10px 0 10px 0;">
-                            <img id="postcard-image" src="assets/png/illustration-1.png" alt="">
-                        </figure>
+                        <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_JfAboZ.json"  background="#FFFFFF"  speed="2"  style="width: 500; height: 500;"  loop  autoplay></lottie-player>
                     </div>
                     <div id="postcard-textarea-bottom">
                         <p class="postcard-text" contenteditable="true">Thank you,</p>
@@ -77,14 +80,6 @@
         </div>
 
         <div class="columns is-centered is-mobile" style="margin-top: 1%; margin-bottom: 1%;">
-            <div class="field is-grouped">
-                <p class="control">
-                    <button class="button is-primary is-outlined" id="download">Download</button>
-                </p>
-                <p class="control">
-                    <button class="button is-primary is-outlined" id="change-illustration">Change Illustration</button>
-                </p>
-            </div>
         </div>
     </div>
 
